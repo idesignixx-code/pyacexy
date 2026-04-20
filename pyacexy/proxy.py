@@ -505,8 +505,8 @@ def main():
     parser.add_argument(
         "--no-response-timeout",
         type=float,
-        default=float(os.getenv("ACEXY_NO_RESPONSE_TIMEOUT", "1")),
-        help="Timeout in seconds for AceStream middleware response (default: 1s)"
+        default=float(os.getenv("ACEXY_NO_RESPONSE_TIMEOUT", "10")),
+        help="Timeout in seconds for AceStream middleware response (default: 10s)"
     )
     parser.add_argument(
         "--m3u8-stream-timeout",
@@ -517,8 +517,8 @@ def main():
     parser.add_argument(
         "--write-timeout",
         type=float,
-        default=float(os.getenv("ACEXY_WRITE_TIMEOUT", "2")),
-        help="Timeout in seconds for writing to client (default: 2s)"
+        default=float(os.getenv("ACEXY_WRITE_TIMEOUT", "5")),
+        help="Timeout in seconds for writing to client (default: 5s)"
     )
 
     args = parser.parse_args()
